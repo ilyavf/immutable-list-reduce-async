@@ -1,10 +1,19 @@
 # immutable-list-reduce-async
 Small extention to the immutable list to perform an async reducer
 
-This can be useful if a reducer function has to perform an asynchronous operation. Instead of result it returns
-an instance of a Task (from `data.task` package).
+This can be useful if a reducer function has to perform an asynchronous operation. So, instead of a result it returns
+an instance of a Task (from `data.task` package):
 
 ```js
+// myReducer :: b -> a -> Task b
+const myReducer = (acc, el) =>
+  new Task((reject, resolve) => {
+    // Some async action here.
+    setTimeout(function () {
+      resolve(acc + el)
+    }, 0)
+  })
+
 // reduceAsync :: (b -> a -> Task b) -> b -> Task b
 List.prototype.reduceAsync
 ```

@@ -1,0 +1,18 @@
+{
+  "name": "immutable-list-reduce-async",
+  "version": "0.0.1",
+  "description": "Extention for immutable list to perform an async reducer",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "standard",
+    "lint:fix": "standard --fix"
+  },
+  "repository": "https://github.com/ilyavf/immutable-list-reduce-async.git",
+  "author": "Ilya Fadeev <fadeev.ilya@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "data.task": "^3.1.1",
+    "immutable": "^3.8.1"
+  }
+}
